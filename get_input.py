@@ -30,5 +30,9 @@ except FileNotFoundError:
 uri = f"http://adventofcode.com/{YEAR}/day/{DAY}/input"
 response = requests.get(uri, cookies={'session': SESSIONID})
 
+if not response.ok:
+    print(f"{response}: {response.reason}")
+    quit(-1)
+
 with open(f"day{DAY}/input", 'w') as f:
     f.write(response.text)
