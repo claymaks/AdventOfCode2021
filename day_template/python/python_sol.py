@@ -14,7 +14,7 @@ def main(argv):
 
     contents = list()
     with open(args.file, 'r') as f:
-        contents = f.readlines()
+        contents = [line.replace('\n', '') for line in f.readlines()]
 
     # Part 1
 
