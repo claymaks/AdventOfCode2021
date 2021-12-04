@@ -1,6 +1,8 @@
 import sys
 import argparse
 
+import tree
+
 def main(argv):
     parser = argparse.ArgumentParser()
     parser.add_argument("-f", "--file", dest="file")
@@ -17,14 +19,11 @@ def main(argv):
         contents = [line.replace('\n', '') for line in f.readlines()]
 
     # Part 1
-
-    print("?")
-    print(f"Answer: {1}")
+    tree.solution(1, 1)
 
     # Part 2
 
-    print("?")
-    print(f"Answer: {1}")
+    tree.solution(2, 1)
 
 
 if __name__ == "__main__":
